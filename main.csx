@@ -87,8 +87,6 @@ private IEnumerable<WeatherSensorMeasurement> MapMeasurementsToWeatherSensorMeas
 	return weatherSensorMeasurements;
 }
 
-Console.WriteLine();
-
 private DateTime GetFromDate()
 {
     if (Args.Any())
