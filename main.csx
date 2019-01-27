@@ -14,15 +14,16 @@ using Netatmo.Net;
 using Netatmo.Net.Model;
 using System.Collections.Generic;
 
-private string _clientId => Environment.GetEnvironmentVariable("ClientId");
-private string _clientSecret => Environment.GetEnvironmentVariable("ClientSecret");
-private string _mainModuleMacAddress => Environment.GetEnvironmentVariable("MacAddress");
-private string _email => Environment.GetEnvironmentVariable("Email");
-private string _password => Environment.GetEnvironmentVariable("Password");
+private string _clientId => Environment.GetEnvironmentVariable("ClientId"); //Netatmo ClientId
+private string _clientSecret => Environment.GetEnvironmentVariable("ClientSecret"); //Netatmo Client Secret
+private string _mainModuleMacAddress => Environment.GetEnvironmentVariable("MacAddress"); //Netatmo device mac address
+private string _email => Environment.GetEnvironmentVariable("Email"); //Netatmo Connect user email
+private string _password => Environment.GetEnvironmentVariable("Password"); //Netatmo Connect user password
 
-private string _weatherMapStationId => Environment.GetEnvironmentVariable("stationId");
+private string _weatherMapStationId => Environment.GetEnvironmentVariable("stationId"); // OpenWeatherMap registered station Id
+private  string _weatherServiceAPIKey => Environment.GetEnvironmentVariable("appId"); //OpenWeatherMap app Id
+
 private readonly string _apiBaseAddress = @"http://api.openweathermap.org/data/3.0/measurements";
-private  string _weatherServiceAPIKey => Environment.GetEnvironmentVariable("appId");
 private int _limit = 2048;
 private int _defaultNumberOfHours = 24;
 private readonly Dictionary<string, MeasurementType[]> Modules = new Dictionary<string, MeasurementType[]>() 
